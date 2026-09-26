@@ -413,22 +413,22 @@
           </div>
         </section>
 
-        <div class="search">
+        <form class="search" role="search">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="11" cy="11" r="7" stroke="#818181" stroke-width="2" />
             <path d="m20 20-3.5-3.5" stroke="#818181" stroke-width="2" stroke-linecap="round" />
           </svg>
-          <input type="text" placeholder="Track your parcel" aria-label="Track your parcel" />
-          <button class="scan-btn" aria-label="Scan parcel code">
+          <input type="search" placeholder="Track your parcel" aria-label="Track your parcel" />
+          <button class="scan-btn" type="button" aria-label="Scan parcel code">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4" stroke="#383838" stroke-width="2" stroke-linecap="round" />
               <path d="M8 12h8" stroke="#383838" stroke-width="2" stroke-linecap="round" />
             </svg>
           </button>
-        </div>
+        </form>
 
         <section class="quick">
-          <button class="quick-item primary">
+          <button class="quick-item primary" type="button">
             <div class="quick-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M4 12h16M12 4l8 8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -436,7 +436,7 @@
             </div>
             <div class="quick-label">Send parcel</div>
           </button>
-          <button class="quick-item">
+          <button class="quick-item" type="button">
             <div class="quick-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M4 19h16M6 15l3-3 2 2 5-5 2 2" stroke="#363636" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -444,7 +444,7 @@
             </div>
             <div class="quick-label">Track order</div>
           </button>
-          <button class="quick-item">
+          <button class="quick-item" type="button">
             <div class="quick-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <rect x="4" y="5" width="16" height="15" rx="3" stroke="#363636" stroke-width="2" />
@@ -453,7 +453,7 @@
             </div>
             <div class="quick-label">Schedule pickup</div>
           </button>
-          <button class="quick-item">
+          <button class="quick-item" type="button">
             <div class="quick-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <circle cx="12" cy="6" r="1.8" fill="#363636" />
@@ -470,7 +470,7 @@
             <div class="mini">FAST. SAFE. RELIABLE.</div>
             <h2>Delivering<br />what matters.</h2>
             <p>To your door. Across the city.<br />Or around the world.</p>
-            <button class="cta">Send now →</button>
+            <button class="cta" type="button">Send now →</button>
           </div>
           <svg width="152" height="182" viewBox="0 0 152 182" fill="none" aria-hidden="true">
             <path d="M102 25c8 0 15 6 15 14 0 11-15 22-15 22s-15-11-15-22c0-8 7-14 15-14Z" fill="#111" />
@@ -487,7 +487,7 @@
 
         <section class="ship-head">
           <h3>Active shipment</h3>
-          <button class="see-all">See all ›</button>
+          <button class="see-all" type="button">See all ›</button>
         </section>
 
         <article class="shipment">
@@ -534,20 +534,20 @@
       </div>
 
       <nav class="nav" aria-label="Bottom navigation">
-        <a class="tab active" href="#" aria-current="page">
+        <a class="tab active" href="/home" aria-current="page">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
           </svg>
           Home
           <div class="indicator"></div>
         </a>
-        <a class="tab" href="#">
+        <a class="tab" href="/orders">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
           Orders
         </a>
-        <button class="tab send-center">
+        <button class="tab send-center" type="button" aria-label="Send package">
           <div class="send-button">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M3 11.5 21 3l-8.5 18-2.5-7-7-2.5Z" fill="#fff" stroke="#fff" stroke-linejoin="round" />
@@ -555,14 +555,14 @@
           </div>
           Send
         </button>
-        <a class="tab" href="#">
+        <a class="tab" href="/locations">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
             <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2" />
           </svg>
           Locations
         </a>
-        <a class="tab" href="#">
+        <a class="tab" href="/profile">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" />
             <path d="M5 20c1.5-3 4-4.5 7-4.5s5.5 1.5 7 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
