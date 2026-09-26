@@ -46,7 +46,6 @@
         border-radius: 28px;
         box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
         overflow: hidden;
-        padding: calc(22px + constant(safe-area-inset-top)) calc(22px + constant(safe-area-inset-right)) calc(18px + constant(safe-area-inset-bottom)) calc(22px + constant(safe-area-inset-left));
         padding: calc(22px + env(safe-area-inset-top)) calc(22px + env(safe-area-inset-right)) calc(18px + env(safe-area-inset-bottom)) calc(22px + env(safe-area-inset-left));
         position: relative;
       }
@@ -116,6 +115,18 @@
         background: var(--accent);
         border-radius: 50%;
         border: 2px solid var(--white);
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
       }
 
       .search {
@@ -329,6 +340,8 @@
 
       .stages {
         margin-top: 10px;
+        padding: 0;
+        list-style: none;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 8px;
@@ -356,7 +369,6 @@
         position: absolute;
         left: 16px;
         right: 16px;
-        bottom: calc(14px + constant(safe-area-inset-bottom));
         bottom: calc(14px + env(safe-area-inset-bottom));
         background: rgba(255, 255, 255, 0.97);
         border-radius: 24px;
@@ -429,6 +441,7 @@
               src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80"
             />
             <span class="dot"></span>
+            <span class="sr-only">1 new notification</span>
           </div>
         </section>
 
@@ -533,22 +546,22 @@
               aria-valuenow="52"
               aria-valuetext="52% complete, current stage In transit (2 of 4)"
             ></div>
-            <div class="stages">
-              <div class="stage done">
+            <ul class="stages">
+              <li class="stage done">
                 <span class="title">Picked up</span>
                 <time datetime="2026-09-09T09:10">09 Sep, 09:10</time>
-              </div>
-              <div class="stage current">
+              </li>
+              <li class="stage current">
                 <span class="title">In transit</span>
                 <time datetime="2026-09-09T12:45">09 Sep, 12:45</time>
-              </div>
-              <div class="stage">
+              </li>
+              <li class="stage">
                 <span class="title">Out for delivery</span>
-              </div>
-              <div class="stage">
+              </li>
+              <li class="stage">
                 <span class="title">Delivered</span>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </article>
       </div>
