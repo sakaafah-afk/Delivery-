@@ -10,7 +10,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet" />
     <style>
       :root {
         --bg: #fcfcfa;
@@ -453,8 +452,8 @@
             <circle cx="11" cy="11" r="7" stroke="#818181" stroke-width="2" />
             <path d="m20 20-3.5-3.5" stroke="#818181" stroke-width="2" stroke-linecap="round" />
           </svg>
-          <input id="tracking-input" type="search" placeholder="Track your parcel" />
-          <button class="scan-btn" type="button" aria-label="Scan parcel code">
+          <input id="tracking-input" name="tracking" type="search" placeholder="Track your parcel" />
+          <button class="scan-btn" type="submit" aria-label="Scan parcel code">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4" stroke="#383838" stroke-width="2" stroke-linecap="round" />
               <path d="M8 12h8" stroke="#383838" stroke-width="2" stroke-linecap="round" />
@@ -574,7 +573,7 @@
             <path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
           </svg>
           Home
-          <div class="indicator"></div>
+          <span class="indicator"></span>
         </a>
         <a class="tab" href="#active-shipment">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
