@@ -159,7 +159,12 @@
       }
 
       .quick-item {
+        border: 0;
+        background: transparent;
+        padding: 0;
+        width: 100%;
         text-align: center;
+        font-family: "Inter", sans-serif;
       }
 
       .quick-icon {
@@ -237,8 +242,12 @@
       }
 
       .see-all {
+        border: 0;
+        background: transparent;
+        padding: 0;
         font-size: 13px;
         color: #666;
+        font-family: "Inter", sans-serif;
       }
 
       .shipment {
@@ -417,23 +426,23 @@
         </div>
 
         <section class="quick">
-          <div class="quick-item primary">
+          <button class="quick-item primary">
             <div class="quick-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M4 12h16M12 4l8 8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div class="quick-label">Send parcel</div>
-          </div>
-          <div class="quick-item">
+          </button>
+          <button class="quick-item">
             <div class="quick-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M4 19h16M6 15l3-3 2 2 5-5 2 2" stroke="#363636" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div class="quick-label">Track order</div>
-          </div>
-          <div class="quick-item">
+          </button>
+          <button class="quick-item">
             <div class="quick-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <rect x="4" y="5" width="16" height="15" rx="3" stroke="#363636" stroke-width="2" />
@@ -441,8 +450,8 @@
               </svg>
             </div>
             <div class="quick-label">Schedule pickup</div>
-          </div>
-          <div class="quick-item">
+          </button>
+          <button class="quick-item">
             <div class="quick-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <circle cx="12" cy="6" r="1.8" fill="#363636" />
@@ -451,7 +460,7 @@
               </svg>
             </div>
             <div class="quick-label">More</div>
-          </div>
+          </button>
         </section>
 
         <section class="promo">
@@ -476,7 +485,7 @@
 
         <section class="ship-head">
           <h3>Active shipment</h3>
-          <div class="see-all">See all ›</div>
+          <button class="see-all">See all ›</button>
         </section>
 
         <article class="shipment">
@@ -536,14 +545,14 @@
           </svg>
           Orders
         </button>
-        <div class="tab send-center">
-          <button class="send-button" aria-label="Send">
+        <button class="tab send-center">
+          <div class="send-button" aria-hidden="true">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M3 11.5 21 3l-8.5 18-2.5-7-7-2.5Z" fill="#fff" stroke="#fff" stroke-linejoin="round" />
             </svg>
-          </button>
+          </div>
           Send
-        </div>
+        </button>
         <button class="tab">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
