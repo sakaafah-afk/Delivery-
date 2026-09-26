@@ -340,9 +340,13 @@
       }
 
       .tab {
+        border: 0;
+        background: transparent;
         text-align: center;
         font-size: 11px;
         color: #6f6f6f;
+        padding: 0;
+        font-family: "Inter", sans-serif;
       }
 
       .tab svg {
@@ -398,19 +402,19 @@
           </div>
         </section>
 
-        <label class="search" aria-label="Track your parcel">
+        <div class="search">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="11" cy="11" r="7" stroke="#818181" stroke-width="2" />
             <path d="m20 20-3.5-3.5" stroke="#818181" stroke-width="2" stroke-linecap="round" />
           </svg>
-          <input type="text" placeholder="Track your parcel" />
+          <input type="text" placeholder="Track your parcel" aria-label="Track your parcel" />
           <button class="scan-btn" aria-label="Scan parcel code">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4" stroke="#383838" stroke-width="2" stroke-linecap="round" />
               <path d="M8 12h8" stroke="#383838" stroke-width="2" stroke-linecap="round" />
             </svg>
           </button>
-        </label>
+        </div>
 
         <section class="quick">
           <div class="quick-item primary">
@@ -488,7 +492,15 @@
             </div>
             <div class="pill">In transit</div>
           </div>
-          <div class="progress">
+          <div
+            class="progress"
+            role="progressbar"
+            aria-label="Shipment progress"
+            aria-valuemin="0"
+            aria-valuemax="4"
+            aria-valuenow="2"
+            aria-valuetext="In transit: 2 of 4 stages complete"
+          >
             <div class="line"></div>
             <div class="stages">
               <div class="stage done">
@@ -511,19 +523,19 @@
       </div>
 
       <nav class="nav" aria-label="Bottom navigation">
-        <div class="tab active">
+        <button class="tab active" aria-current="page">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
           </svg>
           Home
           <div class="indicator"></div>
-        </div>
-        <div class="tab">
+        </button>
+        <button class="tab">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
           Orders
-        </div>
+        </button>
         <div class="tab send-center">
           <button class="send-button" aria-label="Send">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -532,20 +544,20 @@
           </button>
           Send
         </div>
-        <div class="tab">
+        <button class="tab">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
             <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2" />
           </svg>
           Locations
-        </div>
-        <div class="tab">
+        </button>
+        <button class="tab">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" />
             <path d="M5 20c1.5-3 4-4.5 7-4.5s5.5 1.5 7 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
           Profile
-        </div>
+        </button>
       </nav>
     </main>
   </body>
