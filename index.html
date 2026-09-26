@@ -46,6 +46,7 @@
         border-radius: 28px;
         box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
         overflow: hidden;
+        padding: calc(22px + constant(safe-area-inset-top)) 22px calc(18px + constant(safe-area-inset-bottom));
         padding: calc(22px + env(safe-area-inset-top)) 22px calc(18px + env(safe-area-inset-bottom));
         position: relative;
       }
@@ -338,6 +339,7 @@
         position: absolute;
         left: 16px;
         right: 16px;
+        bottom: calc(14px + constant(safe-area-inset-bottom));
         bottom: calc(14px + env(safe-area-inset-bottom));
         background: rgba(255, 255, 255, 0.97);
         border-radius: 24px;
@@ -516,11 +518,11 @@
             <div class="stages">
               <div class="stage done">
                 <span class="title">Picked up</span>
-                <time>09 Sep, 09:10</time>
+                <time datetime="2026-09-09T09:10">09 Sep, 09:10</time>
               </div>
               <div class="stage current">
                 <span class="title">In transit</span>
-                <time>09 Sep, 12:45</time>
+                <time datetime="2026-09-09T12:45">09 Sep, 12:45</time>
               </div>
               <div class="stage">
                 <span class="title">Out for delivery</span>
@@ -534,20 +536,20 @@
       </div>
 
       <nav class="nav" aria-label="Bottom navigation">
-        <a class="tab active" href="/home" aria-current="page">
+        <a class="tab active" href="./index.html#home" aria-current="page">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
           </svg>
           Home
           <div class="indicator"></div>
         </a>
-        <a class="tab" href="/orders">
+        <a class="tab" href="./index.html#orders">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
           </svg>
           Orders
         </a>
-        <a class="tab send-center" href="/send">
+        <a class="tab send-center" href="./index.html#send">
           <div class="send-button">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M3 11.5 21 3l-8.5 18-2.5-7-7-2.5Z" fill="#fff" stroke="#fff" stroke-linejoin="round" />
@@ -555,14 +557,14 @@
           </div>
           Send
         </a>
-        <a class="tab" href="/locations">
+        <a class="tab" href="./index.html#locations">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M12 21s7-5.7 7-11a7 7 0 1 0-14 0c0 5.3 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
             <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2" />
           </svg>
           Locations
         </a>
-        <a class="tab" href="/profile">
+        <a class="tab" href="./index.html#profile">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" />
             <path d="M5 20c1.5-3 4-4.5 7-4.5s5.5 1.5 7 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
