@@ -74,7 +74,7 @@
       h2,
       h3 {
         margin: 0;
-        font-family: "Satoshi", "Inter", sans-serif;
+        font-family: "Inter", sans-serif;
       }
 
       h1 {
@@ -326,6 +326,12 @@
         margin-top: 14px;
       }
 
+      .progress-meta {
+        margin-top: 8px;
+        font-size: 11px;
+        color: #7b7b7b;
+      }
+
       .line {
         height: 4px;
         border-radius: 999px;
@@ -453,12 +459,13 @@
             <path d="m20 20-3.5-3.5" stroke="#818181" stroke-width="2" stroke-linecap="round" />
           </svg>
           <input id="tracking-input" name="tracking" type="search" placeholder="Track your parcel" />
-          <button class="scan-btn" type="submit" aria-label="Scan parcel code">
+          <button class="scan-btn" type="button" aria-label="Scan parcel code">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4" stroke="#383838" stroke-width="2" stroke-linecap="round" />
               <path d="M8 12h8" stroke="#383838" stroke-width="2" stroke-linecap="round" />
             </svg>
           </button>
+          <button class="sr-only" type="submit">Track parcel</button>
         </form>
 
         <section class="quick" id="quick-actions">
@@ -547,6 +554,7 @@
               aria-valuenow="52"
               aria-valuetext="52% complete, current stage In transit (2 of 4)"
             ></div>
+            <div class="progress-meta">52% complete</div>
             <ul class="stages">
               <li class="stage done">
                 <span class="title">Picked up</span>
