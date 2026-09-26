@@ -45,7 +45,6 @@
         border-radius: 28px;
         box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
         overflow: hidden;
-        padding: calc(22px + constant(safe-area-inset-top)) calc(22px + constant(safe-area-inset-right)) calc(18px + constant(safe-area-inset-bottom)) calc(22px + constant(safe-area-inset-left));
         padding: calc(22px + env(safe-area-inset-top)) calc(22px + env(safe-area-inset-right)) calc(18px + env(safe-area-inset-bottom)) calc(22px + env(safe-area-inset-left));
         position: relative;
       }
@@ -325,15 +324,27 @@
       }
 
       .line {
+        width: 100%;
         height: 4px;
         border-radius: 999px;
-        background: linear-gradient(
-          to right,
-          var(--accent) 0%,
-          var(--accent) 52%,
-          #e7e7e7 52%,
-          #e7e7e7 100%
-        );
+        appearance: none;
+        -webkit-appearance: none;
+        border: 0;
+      }
+
+      .line::-webkit-progress-bar {
+        background: #e7e7e7;
+        border-radius: 999px;
+      }
+
+      .line::-webkit-progress-value {
+        background: var(--accent);
+        border-radius: 999px;
+      }
+
+      .line::-moz-progress-bar {
+        background: var(--accent);
+        border-radius: 999px;
       }
 
       .stages {
@@ -367,7 +378,6 @@
         position: absolute;
         left: 16px;
         right: 16px;
-        bottom: calc(14px + constant(safe-area-inset-bottom));
         bottom: calc(14px + env(safe-area-inset-bottom));
         background: rgba(255, 255, 255, 0.97);
         border-radius: 24px;
@@ -535,15 +545,14 @@
             <div class="pill">In transit</div>
           </div>
           <div class="progress">
-            <div
+            <progress
               class="line"
-              role="progressbar"
+              value="52"
+              max="100"
               aria-label="Shipment progress"
-              aria-valuemin="0"
-              aria-valuemax="100"
-              aria-valuenow="52"
-              aria-valuetext="52% complete, current stage In transit"
-            ></div>
+            >
+              52%
+            </progress>
             <div class="progress-meta">Current stage: In transit</div>
             <ul class="stages">
               <li class="stage done">
